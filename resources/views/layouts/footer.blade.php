@@ -8,7 +8,7 @@
                          through
                          completion</h5>
                      <p class="mt-4 d-flex justify-content-center">
-                         <a href="contact.php">
+                         <a href="{{ route('contact') }}">
                              <button class="cssbuttons-io-button-blue cta-btn">
                                  Contact Us
                                  <div class="icon">
@@ -64,11 +64,11 @@
                      <div class="footer-content ">
                          <h5 class="footer-title">Quick Links</h5>
                          <ul class="footer-list">
-                             <li><a href="index.php">Home</a></li>
-                             <li><a href="about.php">Company Profile </a></li>
-                             <li><a href="news.php">Milestones</a></li>
+                             <li><a href="{{ route('home') }}">Home</a></li>
+                             <li><a href="{{ route('companey-profile') }}">Company Profile </a></li>
+                             <li><a href="{{ route('news') }}" >Milestones</a></li>
 
-                             <li><a href="contact.php">Contact Us</a></li>
+                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                          </ul>
                      </div>
                  </div>
@@ -76,12 +76,12 @@
                      <div class="footer-content ">
                          <h5 class="footer-title">Products</h5>
                          <ul class="footer-list">
-                             <li><a class="" href="assembly-&-automation.php">Assembly Automation</a>
+                             <li><a class="" href="{{ route('assembly-&-automation') }}">Assembly Automation</a>
                              </li>
-                             <li><a class="" href="machine-vision-&-laser-inspection.php">Machine Vision & Laser Inspection</a></li>
-                             <li><a class="" href="reliability-testing-automation.php">Reliability Testing Automation</a>
+                             <li><a class="" href="{{ route('machine-vision') }}">Machine Vision & Laser Inspection</a></li>
+                             <li><a class="" href="{{ route('reliability') }}">Reliability Testing Automation</a>
                              </li>
-                             <li><a class="" href="robotic-automation.php">Robotic Automation</a></li>
+                             <li><a class="" href="{{ route(name: 'roboticautomation') }}">Robotic Automation</a></li>
 
                          </ul>
                      </div>

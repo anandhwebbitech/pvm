@@ -7,7 +7,7 @@
                 <h5 class="banner-title">History / Milestones</h5>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php" class="text-light">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-light">Home</a></li>
                         <li class="breadcrumb-item active text-light" aria-current="page">About us</li>
                         <li class="breadcrumb-item active text-light" aria-current="page"> History / Milestones</li>
 

@@ -6,7 +6,7 @@
                 <h5 class="banner-title">Company Profile</h5>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php" class="text-light">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-light">Home</a></li>
                         <li class="breadcrumb-item active text-light" aria-current="page">About us</li>
                         <li class="breadcrumb-item active text-light" aria-current="page">Company profile</li>
 
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3">
                     <div class="bg-color">
-                        <a id="play-video" class="video-play-button" href="video-gallery.php">
+                        <a id="play-video" class="video-play-button" href="{{ route('video-gallery') }}">
                             <span></span>
                         </a>
                         <div class="text">We’re doing the right thing.

@@ -95,7 +95,7 @@
                                         <div class="col-8">
                                             <p class="card-time "> <span class="gap-6"><i class="bi bi-calendar3"></i>12
                                                     Jan, 2023 </span></p>
-                                            <h4><a href="blog-details.php">Strategies School Leavers Can be useful
+                                            <h4><a href="#">Strategies School Leavers Can be useful
                                                     in
                                                     2021</a></h4>
                                         </div>
@@ -111,7 +111,7 @@
                                         <div class="col-8">
                                             <p class="card-time "> <span class="gap-6"><i class="bi bi-calendar3"></i>12
                                                     Jan, 2023 </span></p>
-                                            <h4><a href="blog-details.php">Why Do Spectrum Teach Into Local
+                                            <h4><a href="#">Why Do Spectrum Teach Into Local
                                                     Languages?</a></h4>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                                         <div class="col-8">
                                             <p class="card-time "> <span class="gap-6"><i class="bi bi-calendar3"></i>12
                                                     Jan, 2023 </span></p>
-                                            <h4><a href="blog-details.php">The Best Ways To Keep Your Kids Safe
+                                            <h4><a href="#">The Best Ways To Keep Your Kids Safe
                                                     Online.</a></h4>
                                         </div>
                                     </div>

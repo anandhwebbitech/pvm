@@ -7,7 +7,7 @@
                 <h5 class="banner-title">Product Details</h5>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php" class="text-light">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-light">Home</a></li>
                         <li class="breadcrumb-item active text-light" aria-current="page">Products</li>
                         <li class="breadcrumb-item active text-light" aria-current="page">Product details</li>
 
@@ -83,7 +83,7 @@
                             </p>
                         </div>
                         <div class="my-3">
-                               <a href="contact.php">
+                               <a href="{{ route('contact') }}">
                             <button class="cssbuttons-io-button-blue">
                                Order Now
                                 <div class="icon">

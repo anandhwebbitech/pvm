@@ -5,7 +5,7 @@
                 <div class="row align-items-center">
                     <div class="col-10 col-md-10">
                         <div class="logo">
-                            <a href="index.php"><img src="./assets/images/new-images/logo.png" alt=""></a>
+                            <a href="{{ route('home') }}"><img src="./assets/images/new-images/logo.png" alt=""></a>
                         </div>
                     </div>
 
@@ -20,7 +20,7 @@
                             aria-labelledby="offcanvasExampleLabel">
                             <div class="offcanvas-header">
                                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                                    <a href="index.php" class="logo"><img src="assets/images/new-images/logo.png" /></a>
+                                    <a href="{{ route('home') }}" class="logo"><img src="assets/images/new-images/logo.png" /></a>
                                 </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
@@ -31,32 +31,32 @@
                                     <nav class="mean-menulist">
                                         <ul>
                                             <li>
-                                                <a class="" aria-current="page" href="index.php">Home</a>
+                                                <a class="" aria-current="page" href="{{ route('home') }}">Home</a>
                                             </li>
                                            
                                             <li>
                                                 <a class="" >About Us</a>
                                                 <ul>
                                                    
-                                                    <li><a href="company-profile.php">Company Profile</a></li>
-                                                    <li><a href="history-&-milestone.php">History / Milestones</a></li>
+                                                    <li><a href="{{ route('companey-profile') }}">Company Profile</a></li>
+                                                    <li><a href="{{ route('history-&-milestone') }}">History / Milestones</a></li>
                                                 </ul>
                                             </li>  
                                             <li>
                                                 <a class="" >Products</a>
                                                 <ul>
-                                                    <li><a href="assembly-&-automation.php">ASSEMBLY AUTOMATION</a>
+                                                    <li><a  href="{{ route('assembly-&-automation') }}">ASSEMBLY AUTOMATION</a>
                                                     </li>
-                                                    <li><a href="machine-vision-&-laser-inspection.php">MACHINE VISION & LASER INSPECTION</a>
+                                                    <li><a href="{{ route('machine-vision') }}">MACHINE VISION & LASER INSPECTION</a>
                                                     </li>
-                                                    <li><a href="reliability-testing-automation.php">RELIABILITY TESTING AUTOMATION</a></li>
-                                                    <li><a href="robotic-automation.php">ROBOTIC AUTOMATION</a></li>
+                                                    <li><a href="{{ route('reliability') }}">RELIABILITY TESTING AUTOMATION</a></li>
+                                                    <li><a href="{{ route(name: 'roboticautomation') }}">ROBOTIC AUTOMATION</a></li>
                                                 </ul>
                                             </li>
                                            
                                            
                                             <li>
-                                                <a class="" href="contact.php">Contact Us</a>
+                                                <a class="" href="{{ route('contact') }}">Contact Us</a>
                                             </li>
                                         </ul>
 
@@ -84,7 +84,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3">
                             <div class="site-logo">
-                                <a href="index.php" class="logo"><img src="./assets/images/new-images/logo.png" alt=""></a>
+                                <a href="{{ route('home') }}" class="logo"><img src="./assets/images/new-images/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -126,37 +126,37 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="index.php">Home</a>
+                                    <a class="nav-link " aria-current="page" href="{{ route('home') }}">Home</a>
                                 </li>
                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                         >About us</a>
                                     <ul class="dropdown-menu">
                                         
-                                        <li><a href="company-profile.php" class="dropdown-item">Company Profile</a></li>
-                                        <li><a href="history-&-milestone.php" class="dropdown-item">History / Milestones</a></li>
+                                        <li><a href="{{ route('companey-profile') }}" class="dropdown-item">Company Profile</a></li>
+                                        <li><a href="{{ route('history-&-milestone') }}" class="dropdown-item">History / Milestones</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle " role="button" data-bs-toggle="dropdown"
                                         href="#">Products</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="assembly-&-automation.php" class="dropdown-item">ASSEMBLY AUTOMATION</a>
+                                        <li><a href="{{ route('assembly-&-automation') }}" class="dropdown-item">ASSEMBLY AUTOMATION</a>
                                         </li>
-                                        <li><a href="machine-vision-&-laser-inspection.php" class="dropdown-item">MACHINE VISION & LASER INSPECTION</a>
+                                        <li><a href="{{ route('machine-vision') }}" class="dropdown-item">MACHINE VISION & LASER INSPECTION</a>
                                         </li>
-                                        <li><a href="reliability-testing-automation.php" class="dropdown-item">RELIABILITY TESTING AUTOMATION</a></li>
-                                        <li><a href="robotic-automation.php" class="dropdown-item">ROBOTIC AUTOMATION</a></li>
+                                        <li><a href="{{ route('reliability') }}" class="dropdown-item">RELIABILITY TESTING AUTOMATION</a></li>
+                                        <li><a href="{{ route(name: 'roboticautomation') }}" class="dropdown-item">ROBOTIC AUTOMATION</a></li>
                                     </ul>
                                 </li>
                                
                                 <li class="nav-item">
-                                    <a class="nav-link " href="contact.php">Contact Us</a>
+                                    <a class="nav-link "  href="{{ route('contact') }}" >Contact Us</a>
                                 </li>
 
                             </ul>
                             <div class="ms-auto">
-                                <div><a class="btn header-btn" href="contact.php">Get a Quote</a></div>
+                                <div><a class="btn header-btn" href="{{ route('contact') }}" >Get a Quote</a></div>
                             </div>
 
                         </div>

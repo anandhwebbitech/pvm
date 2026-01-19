@@ -32,13 +32,13 @@
                                 </div>
                             </div>
                             <h1 class="card-title">
-                                <a href="news-detail.php">The Easiest Ways To Make Your Home Look Pricey</a>
+                                <a href="{{ route('news-detail') }}">The Easiest Ways To Make Your Home Look Pricey</a>
                             </h1>
                             <p class="card-text">Large sums of money are not necessary to create an opulent atmosphere
                                 in your house! Decluttering and arranging places
                                 should come first because a clean space gives off a positive vibe immediately.</p>
                             <p class="mt-2">
-                                <a href="news-detail.php" class="read-link stretched-link">Read More<i
+                                <a href="{{ route('news-detail') }}" class="read-link stretched-link">Read More<i
                                         class="bi bi-arrow-right"></i></a>
                             </p>
                         </div>
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                             <h1 class="card-title">
-                                <a href="news-detail.php">What is the importance of interior design for your
+                                <a href="{{ route('news-detail') }}">What is the importance of interior design for your
                                     home?</a>
                             </h1>
                             <p class="card-text">An ordinary room can be made fascinating through the creative medium of
@@ -61,7 +61,7 @@
                                 essential to making it a reflection of your style and personality, from peaceful
                                 bedrooms to comfortable family rooms</p>
                             <p class="mt-2">
-                                <a href="news-detail.php" class="read-link stretched-link">Read More<i
+                                <a href="{{ route('news-detail') }}" class="read-link stretched-link">Read More<i
                                         class="bi bi-arrow-right"></i></a>
                             </p>
                         </div>
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <h1 class="card-title">
-                                <a href="news-detail.php">How can one effectively select the most suitable interior
+                                <a href="{{ route('news-detail') }}">How can one effectively select the most suitable interior
                                     designer in
                                     Coimbatore?</a>
                             </h1>
@@ -86,7 +86,7 @@
                                 information about your lifestyle, personal preferences, how you use your personal space
                                 (such as a bathroom), etc.</p>
                             <p class="mt-2">
-                                <a href="news-detail.php" class="read-link stretched-link">Read More<i
+                                <a href="{{ route('news-detail') }}" class="read-link stretched-link">Read More<i
                                         class="bi bi-arrow-right"></i></a>
                             </p>
                         </div>
@@ -100,13 +100,13 @@
                                 </div>
                             </div>
                             <h1 class="card-title">
-                                <a href="news-detail.php">The Easiest Ways To Make Your Home Look Pricey</a>
+                                <a href="{{ route('news-detail') }}">The Easiest Ways To Make Your Home Look Pricey</a>
                             </h1>
                             <p class="card-text">Large sums of money are not necessary to create an opulent atmosphere
                                 in your house! Decluttering and arranging places
                                 should come first because a clean space gives off a positive vibe immediately.</p>
                             <p class="mt-2">
-                                <a href="news-detail.php" class="read-link stretched-link">Read More<i
+                                <a href="{{ route('news-detail') }}" class="read-link stretched-link">Read More<i
                                         class="bi bi-arrow-right"></i></a>
                             </p>
                         </div>
@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                             <h1 class="card-title">
-                                <a href="news-detail.php">What is the importance of interior design for your
+                                <a href="{{ route('news-detail') }}">What is the importance of interior design for your
                                     home?</a>
                             </h1>
                             <p class="card-text">An ordinary room can be made fascinating through the creative medium of
@@ -129,7 +129,7 @@
                                 essential to making it a reflection of your style and personality, from peaceful
                                 bedrooms to comfortable family rooms</p>
                             <p class="mt-2">
-                                <a href="news-detail.php" class="read-link stretched-link">Read More<i
+                                <a href="{{ route('news-detail') }}" class="read-link stretched-link">Read More<i
                                         class="bi bi-arrow-right"></i></a>
                             </p>
                         </div>
@@ -143,7 +143,7 @@
                                 </div>
                             </div>
                             <h1 class="card-title">
-                                <a href="news-detail.php">How can one effectively select the most suitable interior
+                                <a href="{{ route('news-detail') }}">How can one effectively select the most suitable interior
                                     designer in
                                     Coimbatore?</a>
                             </h1>
@@ -154,7 +154,7 @@
                                 information about your lifestyle, personal preferences, how you use your personal space
                                 (such as a bathroom), etc.</p>
                             <p class="mt-2">
-                                <a href="news-detail.php" class="read-link stretched-link">Read More<i
+                                <a href="{{ route('news-detail') }}" class="read-link stretched-link">Read More<i
                                         class="bi bi-arrow-right"></i></a>
                             </p>
                         </div>

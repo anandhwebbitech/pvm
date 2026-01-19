@@ -75,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4"><a href="about.php" class="read-more"><i class="bi bi-arrow-right-circle-fill"></i>Read
+                    <div class="mt-4"><a href="{{ route('companey-profile') }}" class="read-more"><i class="bi bi-arrow-right-circle-fill"></i>Read
                             More</a></div>
                 </div>
                 <div class=" col-lg-6 col-md-8 ">
@@ -161,7 +161,7 @@
                         excellence and reliability in every project we
                         undertake.</p>
                     <p class="mt-4 ">
-                        <a href="products.php">
+                        <a href="{{ route('assembly-&-automation') }}">
                             <button class="cssbuttons-io-button-blue">
                                 All Products
                                 <div class="icon">
@@ -189,7 +189,7 @@
                                         <h5 class="content-title mb-4">ASSEMBLY AUTOMATION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="project-management.php" class="read-more-link">Read
+                                            <a href="{{ route('product-management') }}" class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -206,7 +206,7 @@
                                         <h5 class="content-title">MACHINE VISION & LASER INSPECTION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="maintenance.php" class="read-more-link">Read
+                                            <a href="{{ route('maintenance') }}" class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -223,7 +223,7 @@
                                         <h5 class="content-title">RELIABILITY TESTING AUTOMATION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="factory-relocation.php" class="read-more-link">Read
+                                            <a href="{{ route('factory') }}"class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -240,7 +240,7 @@
                                         <h5 class="content-title mb-4">ROBOTIC AUTOMATION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="machinery-move.php" class="read-more-link">Read
+                                            <a href="{{ route('machinery-move') }}"  class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -289,7 +289,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3">
                     <div class="bg-color">
-                        <a id="play-video" class="video-play-button" href="video-gallery.php">
+                        <a id="play-video" class="video-play-button" href="{{ route('video-gallery') }}" >
                             <span></span>
                         </a>
                         <div class="text">We're doing the right thing.

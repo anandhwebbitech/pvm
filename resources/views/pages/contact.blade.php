@@ -91,7 +91,7 @@ if (isset($_POST['Contact'])) {
                 <h5 class="banner-title">Cantact Us</h5>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php" class="text-light">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-light">Home</a></li>
                         <li class="breadcrumb-item active text-light" aria-current="page">Contact us</li>
 
                     </ol>
