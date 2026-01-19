@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -29,3 +32,21 @@ Route::get('video-gallery',[FrontendController::class ,'VideoGallery'])->name('v
 
 Route::get('news-detail',[FrontendController::class ,'NewsDetails'])->name('news-detail');
 
+// Admin
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AdminController::class, 'Login'])->name('login');
+    Route::post('/login/check', [AdminController::class, 'loginCheck'])->name('login.check');
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
+    ///////////////////
+    Route::get('categories', [CategoryController::class,'index'])->name('categories');
+    Route::post('categories/store', [CategoryController::class,'store'])->name('categorystore');
+    Route::get('categories/data', [CategoryController::class,'getData'])->name('getcategorydata');
+    Route::put('categories/update/{id}', [CategoryController::class,'update'])->name('categoryupdate');
+    ///////////////////
+    Route::get('products', [ProductController::class, 'index'])->name('products');
+    Route::get('products/data', [ProductController::class, 'getData'])->name('product.data');
+    Route::post('products/store', [ProductController::class, 'store'])->name('product.store');
+    Route::put('products/update/{id}', [ProductController::class, 'update'])->name('product.update');
+    Route::delete('products/delete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
+    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+});
