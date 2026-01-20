@@ -30,7 +30,7 @@ class ProductController extends Controller
 
                 ->addColumn('image', function ($row) {
                     if ($row->image) {
-                        return '<img src="' . asset( $row->image) . '" width="60">';
+                        return '<img src="' . asset($row->image) . '" width="60">';
                     }
                     return '-';
                 })
@@ -52,7 +52,7 @@ class ProductController extends Controller
                             Edit
                         </button>
 
-                        <button class="btn btn-sm btn-danger deleteBtn" data-id="'.$row->id.'">
+                        <button class="btn btn-sm btn-danger deleteBtn" data-id="' . $row->id . '">
                            Delete
                         </button>
                     ';
@@ -126,7 +126,7 @@ class ProductController extends Controller
             ->route('admin.products')
             ->with('success', 'Product added successfully!');
     }
-     /* ===================== EDIT (AJAX) ===================== */
+    /* ===================== EDIT (AJAX) ===================== */
     public function edit($id)
     {
         return Product::findOrFail($id);
@@ -137,32 +137,70 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        $product->name        = $request->name;
-        $product->category_id = $request->category_id;
-        $product->price       = $request->price;
-        $product->status      = $request->status;
-        $product->description = $request->description;
+        // ✅ Validation (same as store)
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'category_id' => 'required',
+            'price' => 'nullable|numeric',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'status' => 'required|boolean',
+            'description' => 'nullable|string',
 
-        // IMAGE UPDATE
+            // Technical specs
+            'specs.work_table_size' => 'nullable|string',
+            'specs.x_axis' => 'nullable|string',
+            'specs.y_axis' => 'nullable|string',
+            'specs.z_axis' => 'nullable|string',
+            'specs.spindle_speed' => 'nullable|string',
+            'specs.spindle_power' => 'nullable|string',
+            'specs.tool_capacity' => 'nullable|string',
+            'specs.positioning_accuracy' => 'nullable|string',
+            'specs.repeatability' => 'nullable|string',
+            'specs.max_load_capacity' => 'nullable|string',
+            'specs.rapid_traverse' => 'nullable|string',
+            'specs.machine_weight' => 'nullable|string',
+        ]);
+
+        // ✅ IMAGE UPDATE (delete old → upload new)
         if ($request->hasFile('image')) {
-            if ($product->image) {
-                Storage::disk('public')->delete(str_replace('storage/', '', $product->image));
+
+            // Delete old image
+            if ($product->image && file_exists(public_path($product->image))) {
+                unlink(public_path($product->image));
             }
 
-            $path = $request->file('image')->store('uploads/products', 'public');
-            $product->image = 'storage/'.$path;
+            // Upload new image
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads/products'), $imageName);
+            $product->image = 'uploads/products/' . $imageName;
         }
 
-        // TECHNICAL SPECS
-        if ($request->specs) {
-            foreach ($request->specs as $key => $value) {
-                $product->$key = $value;
-            }
-        }
+        // ✅ Update product fields
+        $product->update([
+            'name' => $request->name,
+            'category_id' => $request->category_id,
+            'price' => $request->price,
+            'status' => $request->status,
+            'description' => $request->description,
 
-        $product->save();
+            // Technical specifications
+            'work_table_size' => $request->specs['work_table_size'] ?? null,
+            'x_axis' => $request->specs['x_axis'] ?? null,
+            'y_axis' => $request->specs['y_axis'] ?? null,
+            'z_axis' => $request->specs['z_axis'] ?? null,
+            'spindle_speed' => $request->specs['spindle_speed'] ?? null,
+            'spindle_power' => $request->specs['spindle_power'] ?? null,
+            'tool_capacity' => $request->specs['tool_capacity'] ?? null,
+            'positioning_accuracy' => $request->specs['positioning_accuracy'] ?? null,
+            'repeatability' => $request->specs['repeatability'] ?? null,
+            'max_load_capacity' => $request->specs['max_load_capacity'] ?? null,
+            'rapid_traverse' => $request->specs['rapid_traverse'] ?? null,
+            'machine_weight' => $request->specs['machine_weight'] ?? null,
+        ]);
 
-        return response()->json(['success' => true]);
+        return redirect()
+            ->route('admin.products')
+            ->with('success', 'Product updated successfully!');
     }
 
     /* ================= DELETE ================= */

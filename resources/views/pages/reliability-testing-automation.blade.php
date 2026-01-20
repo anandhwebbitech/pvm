@@ -19,43 +19,29 @@
 
 
  <section class="product-section container">
-        <div class="product-grid row">
-            <div class=" col-12 col-md-6  p-3">
-                <div class="product-card" style="background-image:url('./assets/images/new-images/product-page-img-1.webp')">
-                    <a href="{{ route('product-details') }}" class="product-link">
-                        Robo Weld 3.0
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </div>
+    <div class="product-grid row">
+       
 
-            <div class=" col-12 col-md-6  p-3">
-                <div class="product-card  " style="background-image:url('./assets/images/new-images/product-page-img-1.webp')">
-                    <a href="{{ route('product-details') }}" class="product-link">
-                        Dispensing Robot
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </div>
+        @forelse($products as $product)
+        @if(!empty($product->id))
+        <div class="col-12 col-md-6 p-3">
+            <div class="product-card"
+                style="background-image:url('{{ asset($product->image ?? 'assets/images/new-images/product-page-img-1.webp') }}')">
 
-            <div class=" col-12 col-md-6  p-3">
-                <div class="product-card  " style="background-image:url('./assets/images/new-images/product-page-img-1.webp')">
-                    <a href="{{ route('product-details') }}"class="product-link">
-                        Robo Weld 4.0
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class=" col-12 col-md-6  p-3">
-                <div class="product-card  " style="background-image:url('./assets/images/new-images/product-page-img-1.webp')">
-                    <a href="{{ route('product-details') }}" class="product-link">
-                        Industrial RO Plants
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
+                <a href="{{ route('product-details', ['id' => $product->id]) }}" class="product-link">
+                    {{ $product->name }}
+                    <span class="arrow">→</span>
+                </a>
             </div>
         </div>
-    </section>
+        @endif
+        @empty
+        <div class="col-12 text-center p-5">
+            <p>No products available.</p>
+        </div>
+        @endforelse
+
+    </div>
+</section>
 
 @endsection

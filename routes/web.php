@@ -7,21 +7,27 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('home');
-
+// Route::get('/Home', function () {
+//     return view('pages.index');
+// })->name('home');
+Route::get('Home', [FrontendController::class,'index'])->name('home');
 Route::get('companey-profile',[FrontendController::class ,'CompanyProfile'])->name('companey-profile');
 Route::get('history-&-milestone',[FrontendController::class ,'HistoryAndMilestone'])->name('history-&-milestone');
 Route::get('assembly-&-automation',[FrontendController::class ,'AssemblyAndAutomation'])->name('assembly-&-automation');
 Route::get('machine-vision',[FrontendController::class ,'MachineVision'])->name('machine-vision');
 Route::get('reliability',[FrontendController::class ,'Reliability'])->name('reliability');
 Route::get('roboticautomation',[FrontendController::class ,'RoboticAutomation'])->name('roboticautomation');
+
+// Route::get('category/{slug}', [FrontendController::class, 'showCategory'])->name('category.show');
+Route::get('category/{slug?}', [FrontendController::class, 'showCategory'])->name('category.show');
+
 Route::get('contact',[FrontendController::class ,'Contact'])->name('contact');
+Route::post('/send-contact', [FrontendController::class, 'send'])->name('contact.send');
 
 
 
-Route::get('product-details',[FrontendController::class ,'ProductDetails'])->name('product-details');
+// Route::get('product-details',[FrontendController::class ,'ProductDetails'])->name('product-details');
+Route::get('/product/{id}', [FrontendController::class, 'productDetails'])->name('product-details');
 Route::get('news',[FrontendController::class ,'News'])->name('news');
 Route::get('product-management',[FrontendController::class ,'ProductManagement'])->name('product-management');
 Route::get('maintenance',[FrontendController::class ,'Maintenance'])->name('maintenance');

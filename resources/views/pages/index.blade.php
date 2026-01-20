@@ -161,7 +161,7 @@
                         excellence and reliability in every project we
                         undertake.</p>
                     <p class="mt-4 ">
-                        <a href="{{ route('assembly-&-automation') }}">
+                        <a href="{{ route('category.show') }}">
                             <button class="cssbuttons-io-button-blue">
                                 All Products
                                 <div class="icon">

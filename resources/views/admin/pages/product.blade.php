@@ -91,7 +91,7 @@
                         <div class="row g-3 mt-2">
                             <div class="col-md-4">
                                 <label>Product Image</label>
-                                <input type="file" name="image" class="form-control">
+                                <input type="file" name="image" class="form-control" required>
                             </div>
 
                             <div class="col-md-4">

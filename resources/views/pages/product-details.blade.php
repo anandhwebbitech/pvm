@@ -29,12 +29,12 @@
                             <div class="carousel-inner">
 
                                 <div class="carousel-item active">
-                                    <img src="./assets/images/new-images/product-3.webp" class="d-block w-100" alt="Product 1">
+                                    <img src="{{ asset($product->image ?? 'assets/images/new-images/product-page-img-1.webp') }}" class="d-block w-100" alt="Product 1">
                                 </div>
 
-                                <div class="carousel-item">
+                                <!-- <div class="carousel-item">
                                     <img src="./assets/images/new-images/product-2.webp" class="d-block w-100" alt="Product 2">
-                                </div>
+                                </div> -->
 
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
@@ -50,15 +50,11 @@
                 </div>
 
                 <div class="col-12 col-md-6 ">
-                    <h3 class="fw-bold pb-3">Product Name</h3>
+                    <h3 class="fw-bold pb-3">{{ $product->name }}</h3>
                     <div class="poduct-details px-3">
                         <div class="">
                               <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque exercitationem qui,
-                            obcaecati voluptas officiis maiores minus vero ipsum doloribus sequi. Numquam eos
-                            exercitationem mollitia eius at et, aspernatur similique, animi incidunt, facilis
-                            beatae rerum debitis. Eligendi tempore rerum consequatur sit architecto, veritatis
-                            quas eveniet, quos error eaque vel. Odit, cumque.
+                            {{ $product->description }}
                         </p>
                         </div>
                       
@@ -117,56 +113,56 @@
             <div class="spec-grid">
                 <div class="spec-item">
                     <span class="label">Work Table Size</span>
-                    <span class="value">1200 x 800 mm</span>
+                    <span class="value">{{ $product->work_table_size }} mm</span>
                 </div>
                 <div class="spec-item">
                     <span class="label">X-Axis Travel</span>
-                    <span class="value">1100 mm</span>
+                    <span class="value">{{ $product->x_axis }} mm</span>
                 </div>
 
                 <div class="spec-item">
                     <span class="label">Y-Axis Travel</span>
-                    <span class="value">750 mm</span>
+                    <span class="value">{{ $product->y_axis }} mm</span>
                 </div>
                 <div class="spec-item">
                     <span class="label">Z-Axis Travel</span>
-                    <span class="value">650 mm</span>
+                    <span class="value">{{ $product->z_axis }} mm</span>
                 </div>
 
                 <div class="spec-item">
                     <span class="label">Spindle Speed</span>
-                    <span class="value">24,000 RPM</span>
+                    <span class="value">{{ $product->spindle_speed }} RPM</span>
                 </div>
                 <div class="spec-item">
                     <span class="label">Spindle Power</span>
-                    <span class="value">18.5 kW</span>
+                    <span class="value">{{ $product->spindle_power }} kW</span>
                 </div>
 
                 <div class="spec-item">
                     <span class="label">Tool Capacity</span>
-                    <span class="value">40 Tools</span>
+                    <span class="value">{{ $product->tool_capacity }} Tools</span>
                 </div>
                 <div class="spec-item">
                     <span class="label">Positioning Accuracy</span>
-                    <span class="value">±0.003 mm</span>
+                    <span class="value">{{ $product->positioning_accuracy }} mm</span>
                 </div>
 
                 <div class="spec-item">
                     <span class="label">Repeatability</span>
-                    <span class="value">±0.002 mm</span>
+                    <span class="value">±{{ $product->repeatability }} mm</span>
                 </div>
                 <div class="spec-item">
                     <span class="label">Max Load Capacity</span>
-                    <span class="value">800 kg</span>
+                    <span class="value">{{ $product->max_load_capacity }} kg</span>
                 </div>
 
                 <div class="spec-item">
                     <span class="label">Rapid Traverse</span>
-                    <span class="value">48 m/min</span>
+                    <span class="value">{{ $product->rapid_traverse }} m/min</span>
                 </div>
                 <div class="spec-item">
                     <span class="label">Machine Weight</span>
-                    <span class="value">9,500 kg</span>
+                    <span class="value">{{ $product->machine_weight }} kg</span>
                 </div>
             </div>
         </div>
