@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/Home', function () {
 //     return view('pages.index');
 // })->name('home');
+Route::get('/', [FrontendController::class,'index']);
 Route::get('Home', [FrontendController::class,'index'])->name('home');
 Route::get('companey-profile',[FrontendController::class ,'CompanyProfile'])->name('companey-profile');
 Route::get('history-&-milestone',[FrontendController::class ,'HistoryAndMilestone'])->name('history-&-milestone');
