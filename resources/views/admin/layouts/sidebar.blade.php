@@ -127,7 +127,7 @@
             <li class="nav-item mb-2">
                 <a href="{{ route('admin.dashboard') }}"
                    class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                    🏠 <span class="link-text">Dashboard</span>
+                    🏠 <span class="link-text" style="font-size: medium;">Dashboard</span>
                 </a>
             </li>
         </ul>
@@ -139,12 +139,12 @@
         <ul class="nav flex-column mt-3">
             <li class="nav-item mb-2">
                 <a href="{{ route('admin.categories') }}" class="nav-link">
-                    📂 <span class="link-text">Categories</span>
+                    📂 <span class="link-text" style="font-size: medium;">Categories</span>
                 </a>
             </li>
             <li class="nav-item mb-2">
                 <a href="{{ route('admin.products') }}" class="nav-link">
-                    📦 <span class="link-text">Products</span>
+                    📦 <span class="link-text"style="font-size: medium;">Products</span>
                 </a>
             </li>
         </ul>

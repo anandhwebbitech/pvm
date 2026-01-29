@@ -27,12 +27,12 @@
           Logout
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Change Password</a></li>
-          <li><form method="POST" action="#">
-              @csrf
-              <button type="submit" class="dropdown-item text-danger">Logout</button>
-            </form>
+          <!-- <li><a class="dropdown-item" href="#">Profile</a></li> -->
+          <!-- <li><a class="dropdown-item" href="#">Change Password</a></li> -->
+          <li><form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <button type="submit">Logout</button>
+              </form>
         </li>
         </ul>
       </li>

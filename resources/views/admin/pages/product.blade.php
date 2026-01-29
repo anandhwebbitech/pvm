@@ -272,11 +272,20 @@
                         <!-- IMAGE & STATUS -->
                         <div class="row g-3 mt-2">
                             <div class="col-md-4">
+                                <div class="mb-2">
+                                    <img id="edit_image_preview"
+                                        src=""
+                                        alt="Product Image"
+                                        class="img-thumbnail"
+                                        style="max-height: 150px; display: none;">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- OLD IMAGE PREVIEW -->
                                 <label>Product Image</label>
                                 <input type="file" name="image" class="form-control">
                                 <small class="text-muted">Leave empty to keep existing image</small>
                             </div>
-
                             <div class="col-md-4">
                                 <label>Status</label>
                                 <select name="status" id="edit_status" class="form-control">
@@ -398,8 +407,17 @@
                     $('#edit_category').val(data.category_id);
                     $('#edit_status').val(data.status);
                     $('#edit_description').val(data.description);
+                     // ===== IMAGE PREVIEW =====
+                    if (data.image) {
+                        $('#edit_image_preview')
+                             .attr('src', "{{ asset('') }}" + data.image)
+                            .show();
+                    } else {
+                        $('#edit_image_preview').hide();
+                    }
 
-                    // Technical specs
+                    // clear file input
+                    $('#edit_image').val('');
                     $('#edit_work_table_size').val(data.work_table_size);
                     $('#edit_x_axis').val(data.x_axis);
                     $('#edit_y_axis').val(data.y_axis);

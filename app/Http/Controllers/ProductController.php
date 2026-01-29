@@ -94,8 +94,8 @@ class ProductController extends Controller
         $imagePath = null;
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('uploads/products'), $imageName);
-            $imagePath = 'uploads/products/' . $imageName;
+            $request->image->move(public_path('public/uploads/products'), $imageName);
+            $imagePath = 'public/uploads/products/' . $imageName;
         }
 
         // ✅ Create product (COLUMN BASED)
@@ -171,8 +171,8 @@ class ProductController extends Controller
 
             // Upload new image
             $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('uploads/products'), $imageName);
-            $product->image = 'uploads/products/' . $imageName;
+            $request->image->move(public_path('public/uploads/products'), $imageName);
+            $product->image = 'public/uploads/products/' . $imageName;
         }
 
         // ✅ Update product fields

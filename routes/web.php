@@ -40,10 +40,13 @@ Route::get('video-gallery',[FrontendController::class ,'VideoGallery'])->name('v
 Route::get('news-detail',[FrontendController::class ,'NewsDetails'])->name('news-detail');
 
 // Admin
+Route::get('/login', [AdminController::class, 'Login'])->name('login');
+Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/login', [AdminController::class, 'Login'])->name('login');
     Route::post('/login/check', [AdminController::class, 'loginCheck'])->name('login.check');
-    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
+    Route::get('/dashboard', action: [AdminController::class, 'Dashboard'])->name('dashboard');
+
     ///////////////////
     Route::get('categories', [CategoryController::class,'index'])->name('categories');
     Route::post('categories/store', [CategoryController::class,'store'])->name('categorystore');

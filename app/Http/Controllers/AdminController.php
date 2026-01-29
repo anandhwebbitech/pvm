@@ -29,8 +29,17 @@ class AdminController extends Controller
             'email' => 'Invalid credentials.',
         ]);
     }
-     public function Dashboard()
+    public function Dashboard()
     {
         return view('admin.pages.dashboard');
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('login');
     }
 }
