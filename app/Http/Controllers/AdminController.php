@@ -16,11 +16,11 @@ class AdminController extends Controller
     public function loginCheck(Request $request)
     {
         $credentials = $request->validate([
-            'email'    => 'required|email',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        if (Auth::guard('web')->attempt($credentials, $request->boolean('remember'))) {
+        if (Auth::attempt($credentials, $request->remember)) {
 
             $request->session()->regenerate();
 
@@ -29,21 +29,19 @@ class AdminController extends Controller
 
         return back()->withErrors([
             'email' => 'Invalid credentials.',
-        ])->withInput();
-    }
-  
-    public function logout(Request $request)
-    {
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return redirect()->route('login');
+        ]);
     }
     public function Dashboard()
     {
-        $product_count = Product::count();
-        $category_count = Category::count();
-        return view('admin.pages.dashboard',compact('product_count', 'category_count'));
+        return view('admin.pages.dashboard');
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('login');
     }
 }

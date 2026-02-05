@@ -8,7 +8,6 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
-
 // Route::get('/Home', function () {
 //     return view('pages.index');
 // })->name('home');
