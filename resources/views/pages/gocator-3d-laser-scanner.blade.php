@@ -18,7 +18,7 @@
     </section>
 
 
-   <section class="product-section container">
+   <section class="product-section container ">
     <div class="product-grid row">
        
 
@@ -36,7 +36,7 @@
         @endif
         @empty
         <div class="col-12 text-center p-5">
-            <p>No products available.</p>
+            <p>No products available. </p>
         </div>
         @endforelse
 
