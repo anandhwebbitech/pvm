@@ -47,6 +47,11 @@ class FrontendController extends Controller
         $products = Product::orderBy("id", "desc")->where('category_id', 4)->get();
         return view("pages.robotic-automation", compact('products'));
     }
+    public function Gocator3DLaserScanner()
+    {
+        $products = Product::orderBy("id", "desc")->where('category_id', 5)->get();
+        return view("pages.gocator-3d-laser-scanner", compact('products'));
+    }
     public function showCategory($slug = null)
     {
         // Map slug to category IDs

@@ -50,6 +50,8 @@
                                                 </li>
                                                 <li><a href="{{ route('reliability') }}">RELIABILITY TESTING AUTOMATION</a></li>
                                                 <li><a href="{{ route(name: 'roboticautomation') }}">ROBOTIC AUTOMATION</a></li>
+                                                <li><a href="{{ route(name: 'gocator-3d-laser-scanner') }}">GOCATOR 3D LASER SCANNER</a></li>
+
                                             </ul>
                                         </li>
 
@@ -98,7 +100,8 @@
                                     </div>
                                     <div class="text">
                                         <p class="contact-text">Phone</p>
-                                        <a href="tel:+919789320532" class="phone-number">+919789320532</a>
+                                        <a href="tel:+919789320532" class="phone-number">+91 9789320532</a> \
+                                        <a href="tel:+919659977955" class="phone-number">+91 9659977955</a>
                                     </div>
                                 </li>
 
@@ -154,6 +157,7 @@
                                     'MACHINE VISION & LASER INSPECTION' => 'machine-vision-laser-inspection',
                                     'ASSEMBLY AUTOMATION' => 'assembly-automation',
                                     'ROBOTIC AUTOMATION' => 'robotic-automation',
+                                    'GOCATOR 3D LASER SCANNER' => 'gocator-3d-laser-scanner',
                                     ];
                                     @endphp
 
@@ -172,9 +176,9 @@
                             </li>
 
                         </ul>
-                        <div class="ms-auto">
+                        <!-- <div class="ms-auto">
                             <div><a class="btn header-btn" href="{{ route('contact') }}">Get a Quote</a></div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

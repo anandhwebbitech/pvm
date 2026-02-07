@@ -31,7 +31,7 @@
                 </div>
                 <div class=" col-lg-6 col-md-8 ">
                     <div class="ms-lg-5">
-                        <img src="./assets/images/new-images/about-home.webp" width="100%" alt="">
+                        <img src="./assets/images/new-images/about-home-0.webp" width="100%" alt="">
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class="col-lg-6 col-md-9">
                     <div class="p-lg-5">
                         <h6 class="main-subtitle">Why Us</h6>
-                        <h5 class="main-title-white">Why Choose <span class="common">Structura Fab?</span></h5>
+                        <h5 class="main-title-white">Why Choose <br><span class="common">PVM automation and robotics ?</span></h5>
                         <p class="why-choose-text">In choosing Structura Fab, you are selecting a partner
                             dedicated to elevating your projects to new heights. Join us
                             in shaping the future of industries through precision,
@@ -142,25 +142,25 @@
                 <div class="col-lg-2 col-6 col-md-4">
                     <div class="box-wrapper">
                         <p class="box-text">Completed <br>Project</p>
-                        <h5 class="box-title count" data-count="450">450 <span> +</span></h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
-                        <p class="box-text">Active <br>Clients</p>
                         <h5 class="box-title count" data-count="250">250 <span> +</span></h5>
                     </div>
                 </div>
                 <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
-                        <p class="box-text">Experienced <br>Team</p>
-                        <h5 class="box-title count" data-count="2.5">2.5<span>+</span></h5>
+                    <div class="box-wrapper client-box">
+                        <p class="box-text">Active <br>Clients</p>
+                        <h5 class="box-title count" data-count="15">15 <span> +</span></h5>
                     </div>
                 </div>
                 <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
+                    <div class="box-wrapper exp-box">
+                        <p class="box-text">Experienced <br>Team</p>
+                        <h5 class="box-title count" data-count="5">5<span>+</span></h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 col-md-4">
+                    <div class="box-wrapper year-box">
                         <p class="box-text">Years Of <br>Experience</p>
-                        <h5 class="box-title count" data-count="25">25<span>+</span></h5>
+                        <h5 class="box-title count" data-count="8">8<span>+</span></h5>
                     </div>
                 </div>
             </div>

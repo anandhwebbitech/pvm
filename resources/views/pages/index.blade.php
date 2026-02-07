@@ -68,7 +68,7 @@
                                 <div class="icon">
                                     <img src="./assets/images/24-hours.svg" class="img-icon" alt="">
                                 </div>
-                                <h5 class="about-title">120+ Satisfied Client</h5>
+                                <h5 class="about-title">15+ Satisfied Client</h5>
                                 <p class="about-text">Our dedicated team is always available to provide swift and
                                     effective assistance.
                                 </p>
@@ -81,10 +81,10 @@
                 <div class=" col-lg-6 col-md-8 ">
                     <div class="ms-lg-5">
                         <div class="img-box">
-                            <img src="./assets/images/new-images/about-home.webp" alt="">
+                            <img src="./assets/images/new-images/about-home-0.webp" alt="">
                             <img src="./assets/images/new-images/about-home-2.webp" class="small-img" alt="">
                             <div class="about-coun-box">
-                                <span class="coun-number">25</span>
+                                <span class="coun-number">8</span>
                                 <h3 class="coun-title">YEARS <br>OF EXPERIENCE</h3>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                     <div class="item">
                         <div class="service-box">
                             <div class="service-img">
-                                <img src="./assets/images/new-images/home-products-2.webp" alt="">
+                                <img src="./assets/images/new-images/home-products-2.1.webp" alt="">
                                 <div class="content-wrapper">
                                     <div class="content-detail">
                                         <h5 class="content-title">MACHINE VISION & LASER INSPECTION</h5>
@@ -313,25 +313,25 @@
                 <div class="col-lg-2 col-6 col-md-4">
                     <div class="box-wrapper">
                         <p class="box-text">Completed <br>Project</p>
-                        <h5 class="box-title count" data-count="450">450 <span> +</span></h5>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
-                        <p class="box-text">Active <br>Clients</p>
                         <h5 class="box-title count" data-count="250">250 <span> +</span></h5>
                     </div>
                 </div>
                 <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
-                        <p class="box-text">Experienced <br>Team</p>
-                        <h5 class="box-title count" data-count="2.5">2.5 <span>+</span></h5>
+                    <div class="box-wrapper client-box">
+                        <p class="box-text">Active <br>Clients</p>
+                        <h5 class="box-title count" data-count="15">15 <span> +</span></h5>
                     </div>
                 </div>
                 <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
+                    <div class="box-wrapper exp-box">
+                        <p class="box-text">Experienced <br>Team</p>
+                        <h5 class="box-title count" data-count="5">5  <span>+</span></h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 col-md-4">
+                    <div class="box-wrapper year-box">
                         <p class="box-text">Years Of <br>Experience</p>
-                        <h5 class="box-title count" data-count="25">25 <span>+</span></h5>
+                        <h5 class="box-title count" data-count="8">8 <span>+</span></h5>
                     </div>
                 </div>
             </div>
@@ -342,7 +342,7 @@
     </section>
 
 
-    <section class="client-service">
+    <section class="client-service mb-5">
         <div class="container">
             <h6 class="main-subtitle">Our Valuable Clients</h6>
             <h5 class="main-title">Our <span class="common">Clients</span></h5>
@@ -460,7 +460,7 @@
         </div>
     </section>
 
-    <section class="testimonial">
+    <!-- <section class="testimonial">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -538,6 +538,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 @endsection

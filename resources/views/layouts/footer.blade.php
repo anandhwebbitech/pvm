@@ -41,20 +41,20 @@
                          <div class="social mt-4">
                              <ul class="mb-0 px-0">
                                  <li>
-                                     <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                     <a><i class="fa-brands fa-facebook-f"></i></a>
                                  </li>
                                  <li>
-                                     <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                                     <a><i class="fa-brands fa-linkedin-in"></i></a>
                                  </li>
 
                                  <li>
-                                     <a href=""><i class="bi bi-twitter-x"></i></a>
+                                     <a><i class="bi bi-twitter-x"></i></a>
                                  </li>
                                  <li>
-                                     <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                     <a><i class="fa-brands fa-youtube"></i></a>
                                  </li>
                                  <li>
-                                     <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                     <a><i class="fa-brands fa-instagram"></i></a>
                                  </li>
                              </ul>
                          </div>
@@ -82,6 +82,7 @@
                              <li><a class="" href="{{ route('reliability') }}">Reliability Testing Automation</a>
                              </li>
                              <li><a class="" href="{{ route(name: 'roboticautomation') }}">Robotic Automation</a></li>
+                             <li><a class="" href="{{ route(name: 'gocator-3d-laser-scanner') }}">Gocator 3D Laser Scanner</a></li>
 
                          </ul>
                      </div>
