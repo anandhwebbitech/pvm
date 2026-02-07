@@ -4663,7 +4663,9 @@ button:hover~.cursor-circle {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent 60%);
     pointer-events: none;
 }
-
+@media (max-width:1440px){
+    
+}
 @media (max-width: 768px) {
     .banner-content-wrap {
         left: 20px;
@@ -4755,9 +4757,6 @@ button:hover~.cursor-circle {
     }
 
 }
-<<<<<<< HEAD
-
-=======
 @media (max-width:375px){
     .about-detail .img-box {
         padding-left: 0px;
@@ -4767,7 +4766,6 @@ button:hover~.cursor-circle {
         display: none;
     }
 }
->>>>>>> origin/master
 .product-select {
     display: flex;
     align-items: center;
