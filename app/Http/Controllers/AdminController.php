@@ -46,4 +46,8 @@ class AdminController extends Controller
 
         return redirect('login');
     }
+
+    public function Banner(){
+        return view('admin.pages.banner');
+    }
 }

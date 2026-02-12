@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\MilestonesController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
 
 
 // Route::get('/Home', function () {
@@ -48,7 +50,11 @@ Route::post('/login/check', [AdminController::class, 'loginCheck'])->name('login
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard',  [AdminController::class, 'Dashboard'])->name('dashboard');
-
+    Route::get('/banner',  [AdminController::class, 'Banner'])->name('banner');
+    Route::post('/banner/store', [BannerController::class, 'store'])->name('bannerstore');
+    Route::get('/banner/data', [BannerController::class, 'getBannerData'])->name('getbannerdata');
+    Route::put('/banner/update/{id}',[BannerController::class, 'update'])->name('bannerupdate');
+    Route::delete('/admin/banner/delete/{id}',[BannerController::class, 'destroy'])->name('bannerdelete');
     ///////////////////
     Route::get('categories', [CategoryController::class,'index'])->name('categories');
     Route::post('categories/store', [CategoryController::class,'store'])->name('categorystore');
