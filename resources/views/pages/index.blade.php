@@ -6,39 +6,39 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active banner-slide"
-                    style="background-image:url('./assets/images/banner-2.jpg');">
+                    style="background-image:url('./assets/images/new-images/home-banner-1.webp');  background-size:cover; background-repeat: no-repeat;">
 
-                    <div class="overlay"></div>
+                    <!-- <div class="overlay"></div> -->
 
-                    <div class="banner-content-wrap">
+                    <!-- <div class="banner-content-wrap">
                         <h1 class="banner-title">Smarter Automation Starts Here</h1>
-                    </div>
+                    </div> -->
 
-                    <span class="diagonal-shape"></span>
+                    <!-- <span class="diagonal-shape"></span> -->
                 </div>
 
                 <div class="carousel-item banner-slide"
-                    style="background-image:url('./assets/images/banner-2.webp');">
+                    style="background-image:url('./assets/images/new-images/home-banner-2.webp'); background-size:cover; background-repeat: no-repeat">
 
-                    <div class="overlay"></div>
+                    <!-- <div class="overlay"></div> -->
 
-                    <div class="banner-content-wrap">
+                    <!-- <div class="banner-content-wrap">
                         <h1 class="banner-title">Smarter Automation Starts Here</h1>
-                    </div>
+                    </div> -->
 
-                    <span class="diagonal-shape"></span>
+                    <!-- <span class="diagonal-shape"></span> -->
                 </div>
 
                 <div class="carousel-item banner-slide"
-                    style="background-image:url('./assets/images/banner-3.webp');">
+                    style="background-image:url('./assets/images/new-images/home-banner-3.webp'); background-size:cover; background-repeat: no-repeat">
 
-                    <div class="overlay"></div>
+                    <!-- <div class="overlay"></div> -->
 
-                    <div class="banner-content-wrap">
+                    <!-- <div class="banner-content-wrap">
                         <h1 class="banner-title">Smarter Automation Starts Here</h1>
-                    </div>
+                    </div> -->
 
-                    <span class="diagonal-shape"></span>
+                    <!-- <span class="diagonal-shape"></span> -->
                 </div>
 
             </div>
