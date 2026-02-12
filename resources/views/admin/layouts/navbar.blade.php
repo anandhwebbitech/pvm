@@ -3,9 +3,9 @@
 
     <!-- MOBILE MENU TOGGLE -->
     
-        <button class="btn btn-outline-secondary " id="toggleSidebar">
-        ☰
-    </button>
+        <button class="btn btn-outline-secondary d-lg-none" id="toggleSidebar">
+          ☰
+      </button>
     
 
     <!-- Search -->

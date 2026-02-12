@@ -34,7 +34,7 @@ class AdminController extends Controller
     public function Dashboard()
     {
         $product_count = Product::count();
-        $category_count = Category::where('status',1)->get();
+        $category_count = Category::where('status',1)->count();
         return view('admin.pages.dashboard',compact('product_count','category_count'));
     }
     public function logout(Request $request)
