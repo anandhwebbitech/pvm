@@ -4665,11 +4665,40 @@ button:hover~.cursor-circle {
     pointer-events: none;
 }
 
-@media (max-width:1440px) {}
+@media (max-width:1440px) {
+    .banner-slide {
+        height: 500px !important;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .about-detail {
+        padding: 70px 0px 0px;
+    }
+}
+
+@media (max-width:1024px) {
+    .banner-slide {
+        height: 500px !important;
+    }
+
+    .about-detail {
+        padding: 60px 0px 0px;
+    }
+}
 
 @media (max-width: 768px) {
+
+    .mobile-header .logo img {
+        width: 130px;
+    }
+
+    .about-detail {
+        padding: 50px 0px 0px;
+    }
+
     .banner-slide {
-        height: 250px !important;
+        height: 300px !important;
     }
 
     .banner-content-wrap {
@@ -4744,9 +4773,12 @@ button:hover~.cursor-circle {
 }
 
 @media (max-width:425px) {
+    .about-detail {
+        padding: 50px 0px 0px;
+    }
 
     .banner-slide {
-        height: 200px !important;
+        height: 180px !important;
     }
 
     .banner-slide {
@@ -4766,19 +4798,75 @@ button:hover~.cursor-circle {
         line-height: 27px;
     }
 
+    .about-detail .img-box .about-coun-box {
+        width: 195px;
+        height: 230px;
+        padding: 11px 0px;
+        right: 25px;
+    }
+
+    .about-detail .img-box .small-img {
+        width: 175px !important;
+        top: 70%;
+        border: 5px solid #ffffff;
+        left: 25px;
+    }
 }
 
 @media (max-width:375px) {
-    .banner-slide {
-        height: 150px !important;
+    .about-detail {
+        padding: 50px 0px 0px;
     }
+
+    .banner-slide {
+        height: 160px !important;
+    }
+
     .about-detail .img-box {
         padding-left: 0px;
     }
-
-    .about-detail .img-box .about-coun-box,
     .about-detail .img-box .small-img {
-        display: none;
+        width: 170px !important;
+        top: 75%;
+        border: 5px solid #ffffff;
+    }
+        .about-detail .img-box .about-coun-box {
+        width: 175px;
+        height: 231px;
+        padding: 11px 0px;
+        right: 6px;
+    }
+      .about-detail .img-box .small-img {
+        width: 175px !important;
+        top: 76%;
+        border: 5px solid #ffffff;
+        left: -11px;
+    }
+
+}
+
+@media (max-width:320px) {
+    .about-detail {
+        padding: 45px 0px 0px;
+    }
+
+    .banner-slide {
+        height: 137px !important;
+        background-size: cover !important;
+        background-position: center;
+    }
+
+    .about-detail .img-box .about-coun-box {
+        width: 150px;
+        height: 200px;
+        padding: 11px 0px;
+        right: 10px;
+    }
+      .about-detail .img-box .small-img {
+        width: 175px !important;
+        top: 78%;
+        border: 5px solid #ffffff;
+        left: -13px;
     }
 }
 

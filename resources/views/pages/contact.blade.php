@@ -4,7 +4,7 @@
 <section class="page-banner">
     <div class="banner-content">
         <div class="container">
-            <h5 class="banner-title">Cantact Us</h5>
+            <h5 class="banner-title">Contact Us</h5>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-light">Home</a></li>

@@ -82,7 +82,6 @@
                              <li><a class="" href="{{ route('reliability') }}">Reliability Testing Automation</a>
                              </li>
                              <li><a class="" href="{{ route(name: 'roboticautomation') }}">Robotic Automation</a></li>
-                             <li><a class="" href="{{ route(name: 'gocator-3d-laser-scanner') }}">Gocator 3D Laser Scanner</a></li>
 
                          </ul>
                      </div>

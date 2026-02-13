@@ -19,7 +19,6 @@ Route::get('assembly-&-automation',[FrontendController::class ,'AssemblyAndAutom
 Route::get('machine-vision',[FrontendController::class ,'MachineVision'])->name('machine-vision');
 Route::get('reliability',[FrontendController::class ,'Reliability'])->name('reliability');
 Route::get('roboticautomation',[FrontendController::class ,'RoboticAutomation'])->name('roboticautomation');
-Route::get('gocator-3d-laser-scanner',[FrontendController::class ,'Gocator3DLaserScanner'])->name('gocator-3d-laser-scanner');
 
 // Route::get('category/{slug}', [FrontendController::class, 'showCategory'])->name('category.show');
 Route::get('category/{slug?}', [FrontendController::class, 'showCategory'])->name('category.show');

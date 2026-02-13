@@ -60,7 +60,6 @@ class FrontendController extends Controller
             'machine-vision-laser-inspection' => 2,
             'assembly-automation' => 3,
             'robotic-automation' => 4,
-            'gocator-3d-laser-scanner' => 5,
         ];
 
         // Map slug to views (always define this)
@@ -69,7 +68,6 @@ class FrontendController extends Controller
             'machine-vision-laser-inspection' => 'pages.machine-vision-&-laser-inspection',
             'assembly-automation' => 'pages.assembly-&-automation',
             'robotic-automation' => 'pages.robotic-automation',
-            'gocator-3d-laser-scanner' => 'pages.gocator-3d-laser-scanner',
         ];
 
         if ($slug === null) {

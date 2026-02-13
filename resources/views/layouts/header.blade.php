@@ -50,7 +50,6 @@
                                                 </li>
                                                 <li><a href="{{ route('reliability') }}">RELIABILITY TESTING AUTOMATION</a></li>
                                                 <li><a href="{{ route(name: 'roboticautomation') }}">ROBOTIC AUTOMATION</a></li>
-                                                <li><a href="{{ route(name: 'gocator-3d-laser-scanner') }}">GOCATOR 3D LASER SCANNER</a></li>
 
                                             </ul>
                                         </li>
@@ -157,7 +156,6 @@
                                     'MACHINE VISION & LASER INSPECTION' => 'machine-vision-laser-inspection',
                                     'ASSEMBLY AUTOMATION' => 'assembly-automation',
                                     'ROBOTIC AUTOMATION' => 'robotic-automation',
-                                    'GOCATOR 3D LASER SCANNER' => 'gocator-3d-laser-scanner',
                                     ];
                                     @endphp
 
