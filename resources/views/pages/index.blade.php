@@ -148,7 +148,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-3">
+            <div class="col-lg-2 col-md-6 col-12">
                 <div class="bg-color">
                     <a id="play-video" class="video-play-button" href="{{ route('video-gallery') }}">
                         <span></span>
@@ -157,7 +157,7 @@
                         The right way.</div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4  col-md-6 col-12 d-flex align-items-center justify-content-center">
                 <div class="img-box">
                     <img src="./assets/images/new-images/about-img2.webp" alt="">
                 </div>
