@@ -4765,9 +4765,10 @@ button:hover~.cursor-circle {
     .featured-carousel img {
         height: 280px;
     }
-.footer .footer-content{
-    margin-bottom: 30px;
-}
+
+    .footer .footer-content{
+        margin-bottom: 30px;
+    }
 }
 
 @media (min-width:576px) and (max-width:767px) {
@@ -4845,7 +4846,7 @@ button:hover~.cursor-circle {
         right: 0px;
     }
 
- 
+
 
     .banner-slide {
         height: 160px !important;
@@ -4881,7 +4882,8 @@ button:hover~.cursor-circle {
     .about-detail {
         padding: 45px 0px 0px;
     }
-.achivement-detail .exp-box::after {
+
+    .achivement-detail .exp-box::after {
         top: 105%;
         right: -10px;
     }

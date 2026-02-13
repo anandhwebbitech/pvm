@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-10 col-md-10">
                     <div class="logo">
-                        <a href="{{ route('home') }}"><img src="./assets/images/new-images/logo.png" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('assets/images/new-images/logo.png') }}" alt=""></a>
                     </div>
                 </div>
 
@@ -19,7 +19,7 @@
                         aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                                <a href="{{ route('home') }}" class="logo"><img src="assets/images/new-images/logo.png" /></a>
+                               <a href="{{ route('home') }}"><img src="{{ asset('assets/images/new-images/logo.png') }}" alt=""></a>
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
