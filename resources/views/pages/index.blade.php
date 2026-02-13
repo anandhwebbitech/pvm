@@ -283,7 +283,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-3">
+            <div class="col-lg-2 col-md-6 col-12">
                 <div class="bg-color">
                     <a id="play-video" class="video-play-button" href="{{ route('video-gallery') }}">
                         <span></span>
@@ -292,7 +292,7 @@
                         The right way.</div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-center">
                 <div class="img-box">
                     <img src="./assets/images/new-images/about-img2.webp" alt="">
                 </div>
@@ -307,7 +307,7 @@
 
             <div class="row gy-4 justify-content-evenly">
                 <div class="col-lg-2 col-6 col-md-4">
-                    <div class="box-wrapper">
+                    <div class="box-wrapper completed-box">
                         <p class="box-text">Completed <br>Project</p>
                         <h5 class="box-title count" data-count="250">250 <span> +</span></h5>
                     </div>

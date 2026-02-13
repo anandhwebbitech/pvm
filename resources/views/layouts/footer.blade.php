@@ -111,7 +111,7 @@
                  <div class="col-12">
                      <div class="row py-0">
                          <div class="col-12 col-md-6">
-                             <p class="text-secondary text-center text-md-start "> Copyrights © 2025 All Rights Reserved.</p>
+                             <p class="text-secondary text-center text-md-start pb-md-0 pb-3"> Copyrights © 2025 All Rights Reserved.</p>
                          </div>
                          <div class="col-12 col-md-6">
                              <p class="text-secondary text-center text-md-end "> Designed by <a href="" class="ms-1 fw-bold design-link">WEBBITECH.</a></p>

@@ -161,7 +161,7 @@
 
         <div class="row gy-4 justify-content-evenly">
             <div class="col-lg-2 col-6 col-md-4">
-                <div class="box-wrapper">
+                <div class="box-wrapper completed-box">
                     <p class="box-text">Completed <br>Project</p>
                     <h5 class="box-title count" data-count="250">250 <span> +</span></h5>
                 </div>

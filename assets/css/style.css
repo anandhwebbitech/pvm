@@ -4688,6 +4688,17 @@ button:hover~.cursor-circle {
 }
 
 @media (max-width: 768px) {
+    .achivement-detail .exp-box .box-title {
+        margin-left: 45px;
+    }
+
+    .achivement-detail .exp-box::after {
+        top: 98%;
+    }
+
+    .why-choose .img-box {
+        width: 190px;
+    }
 
     .mobile-header .logo img {
         width: 130px;
@@ -4754,6 +4765,9 @@ button:hover~.cursor-circle {
     .featured-carousel img {
         height: 280px;
     }
+.footer .footer-content{
+    margin-bottom: 30px;
+}
 }
 
 @media (min-width:576px) and (max-width:767px) {
@@ -4775,6 +4789,10 @@ button:hover~.cursor-circle {
 @media (max-width:425px) {
     .about-detail {
         padding: 50px 0px 0px;
+    }
+
+    .why-choose .img-box {
+        width: 100%;
     }
 
     .banner-slide {
@@ -4818,6 +4836,17 @@ button:hover~.cursor-circle {
         padding: 50px 0px 0px;
     }
 
+    .achivement-detail .exp-box::after {
+        top: 100%;
+        right: 0px;
+    }
+
+    .achivement-detail .completed-box::after {
+        right: 0px;
+    }
+
+ 
+
     .banner-slide {
         height: 160px !important;
     }
@@ -4825,18 +4854,21 @@ button:hover~.cursor-circle {
     .about-detail .img-box {
         padding-left: 0px;
     }
+
     .about-detail .img-box .small-img {
         width: 170px !important;
         top: 75%;
         border: 5px solid #ffffff;
     }
-        .about-detail .img-box .about-coun-box {
+
+    .about-detail .img-box .about-coun-box {
         width: 175px;
         height: 231px;
         padding: 11px 0px;
         right: 6px;
     }
-      .about-detail .img-box .small-img {
+
+    .about-detail .img-box .small-img {
         width: 175px !important;
         top: 76%;
         border: 5px solid #ffffff;
@@ -4848,6 +4880,19 @@ button:hover~.cursor-circle {
 @media (max-width:320px) {
     .about-detail {
         padding: 45px 0px 0px;
+    }
+.achivement-detail .exp-box::after {
+        top: 105%;
+        right: -10px;
+    }
+
+    .achivement-detail .completed-box::after {
+        right: 0px;
+    }
+
+    .achivement-detail .box-wrapper .box-text {
+        padding-left: 28px;
+
     }
 
     .banner-slide {
@@ -4862,7 +4907,8 @@ button:hover~.cursor-circle {
         padding: 11px 0px;
         right: 10px;
     }
-      .about-detail .img-box .small-img {
+
+    .about-detail .img-box .small-img {
         width: 175px !important;
         top: 78%;
         border: 5px solid #ffffff;
