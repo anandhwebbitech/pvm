@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Milestone;
 use App\Models\Product;
@@ -15,7 +16,8 @@ class FrontendController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('pages.index', compact('categories'));
+        $banners = Banner::where('status',1)->get();
+        return view('pages.index', compact('categories','banners'));
     }
 
     public function CompanyProfile()

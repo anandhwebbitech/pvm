@@ -149,7 +149,12 @@
             </li>
             <li class="nav-item mb-2">
                 <a href="{{ route('admin.milestone') }}" class="nav-link">
-                    📦 <span class="link-text"style="font-size: medium;">Milestones</span>
+                    🏆 <span class="link-text"style="font-size: medium;">Milestones</span>
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="{{ route('admin.banner') }}" class="nav-link">
+                    🖼️ <span class="link-text"style="font-size: medium;">Banner</span>
                 </a>
             </li>
         </ul>
