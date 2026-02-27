@@ -114,31 +114,22 @@
                         </p>
                     </div>
                     <div class="pt-3 col-12 col-md-6">
-                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Proven Expertise in Industrial Automation</h4>
-                        <p class="why-choose-text">PVM Automation brings deep technical expertise in designing and
-                            integrating advanced automation systems. From assembly automation to robotic solutions,
-                            their team ensures seamless integration that enhances productivity and operational
-                            efficiency.</p>
+                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Advanced Technology & Innovation</h4>
+                        <p class="why-choose-text">With capabilities in machine vision systems, laser inspection, and 3D scanning technologies, PVM Automation leverages cutting-edge tools to provide accurate, reliable, and future-ready automation solutions.</p>
                     </div>
                     <div class="pt-3 col-12 col-md-6">
-                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Customized Engineering Solutions</h4>
-                        <p class="why-choose-text"> Every industry has unique challenges. PVM Automation focuses on
-                            delivering tailor-made solutions that align with specific production requirements, ensuring
-                            maximum performance and scalability.
+                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Quality & Precision</h4>
+                        <p class="why-choose-text"> Automation is all about consistency and precision. PVM Automation emphasizes high-quality standards in every project, ensuring systems that are durable, efficient, and reliable over the long term.
                         </p>
                     </div>
                     <div class="pt-3 col-12 col-md-6">
-                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Proven Expertise in Industrial Automation</h4>
-                        <p class="why-choose-text">PVM Automation brings deep technical expertise in designing and
-                            integrating advanced automation systems. From assembly automation to robotic solutions,
-                            their team ensures seamless integration that enhances productivity and operational
-                            efficiency.</p>
+                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Cost-Effective & Efficient Solutions</h4>
+                        <p class="why-choose-text">By optimizing production workflows and minimizing manual intervention, PVM Automation helps businesses reduce operational costs while improving output quality.</p>
                     </div>
                     <div class="pt-3 col-12 col-md-6">
-                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Customized Engineering Solutions</h4>
-                        <p class="why-choose-text"> Every industry has unique challenges. PVM Automation focuses on
-                            delivering tailor-made solutions that align with specific production requirements, ensuring
-                            maximum performance and scalability.
+                        <h4 class="text-white"> <i class="fas fa-microchip text-danger"></i> Strong Technical Support & Service</h4>
+                        <p class="why-choose-text">
+                            Beyond implementation, PVM Automation provides continuous technical support and service assistance, ensuring smooth operations and long-term partnership value.
                         </p>
                     </div>
                 </div>

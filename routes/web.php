@@ -26,7 +26,7 @@ Route::get('roboticautomation',[FrontendController::class ,'RoboticAutomation'])
 Route::get('category/{slug?}', [FrontendController::class, 'showCategory'])->name('category.show');
 
 Route::get('contact',[FrontendController::class ,'Contact'])->name('contact');
-Route::post('/send-contact', [FrontendController::class, 'send'])->name('contact.send');
+Route::any('/send-contact', [FrontendController::class, 'send'])->name('contact.send');
 
 
 

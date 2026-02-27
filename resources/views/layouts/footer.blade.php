@@ -36,7 +36,7 @@
                              <img src="{{ asset('assets/images/new-images/logo.png') }}" alt="">
                          </div>
                          <p class="footer-text">
-                             PVM Automation & Robotics provides an advanced automation and robotics solutions for efficient, smart industrial manufacturing systems.
+                             At PVM Automation & Robotics, we provide innovative automation and robotics solutions that drive efficiency, accuracy, and smart manufacturing excellence. Our customized systems are engineered to optimize industrial processes, reduce downtime, and improve overall performance.
                          </p>
                          <div class="social mt-4">
                              <ul class="mb-0 px-0">
@@ -114,7 +114,7 @@
                              <p class="text-secondary text-center text-md-start pb-md-0 pb-3"> Copyrights © 2025 All Rights Reserved.</p>
                          </div>
                          <div class="col-12 col-md-6">
-                             <p class="text-secondary text-center text-md-end "> Designed by <a href="" class="ms-1 fw-bold design-link">WEBBITECH.</a></p>
+                             <p class="text-secondary text-center text-md-end "> Designed by <a href="https://webbitech.com/" class="ms-1 fw-bold design-link">WEBBITECH.</a></p>
                          </div>
                      </div>
                  </div>

@@ -73,19 +73,19 @@
                         <div class="col-md-6">
                             <div class="input-container">
                                 <span class="input-group-text"><i class="fa fa-user icon"></i></span>
-                                <input class="form-control" type="text" placeholder="Username" name="usrname">
+                                <input class="form-control" type="text" placeholder="Username" name="usrname"  pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="input-container">
                                 <span class="input-group-text"><i class="fa-regular fa-envelope icon"></i></span>
-                                <input class=" form-control" type="email" placeholder="Email" name="email">
+                                <input class=" form-control" type="email" placeholder="Email" name="email" style="text-transform: lowercase;" oninput="this.value = this.value.toLowerCase();">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="input-container">
                                 <div class="input-group-text"><i class="fa-solid fa-phone icon"></i></div>
-                                <input class=" form-control" type="phone" placeholder="Phone" name="phone_number">
+                                <input class=" form-control" type="phone" placeholder="Phone" name="phone_number" oninput="this.value = this.value.replace(/[^0-9]/g, '')" pattern="^\+?[0-9]{10,13}$" minlength="10" maxlength="13">
                             </div>
                         </div>
                         <div class="col-md-6">

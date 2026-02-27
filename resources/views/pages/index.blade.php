@@ -24,8 +24,8 @@
                 <div class="col-lg-6 col-md-12 ">
                     <h5 class="main-subtitle">About Our Company</h5>
                     <h5 class="main-title">Welcome to <br class="d-none d-md-block"> <span class="common">PVM Automation & Robotics </span></h5>
-                    <p class="about-text">PVM Automation & Robotics is specialized in Design, Manufacture and Constructing an Automation and Robotics for Manufacturing Industry. We are also experts in Developing and Integrating an Assembly Automation for Various Process like Welding, Press Line Feeder Automation and Glue Dispensing Automation.
-                        Our experience in the field of the building an Automation has made to a level of integrating the values of our customer needs and understanding them to give the best in terms of quality and cost.</p>
+                    <p class="about-text">PVM Automation and Robotics is a specialized engineering company focused on the design, manufacture, and integration of automation and robotic systems for the manufacturing sector.</p>
+                       <p class="about-text">Our expertise includes assembly automation and process integration for applications such as welding systems, press line feeder automation, automated glue dispensing, robotic laser inspection, 3D laser inspection systems, and tailor-made testing equipment. We deliver customized solutions engineered to meet each client’s unique production and quality requirements.</p>
                     <div class="mt-3">
                         <div class="row gy-4">
                             <div class="col-md-6">
@@ -162,7 +162,7 @@
                                         <h5 class="content-title mb-4">ASSEMBLY AUTOMATION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="{{ route('product-management') }}" class="read-more-link">Read
+                                            <a href="{{ route('assembly-&-automation') }}" class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -179,7 +179,7 @@
                                         <h5 class="content-title">MACHINE VISION & LASER INSPECTION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="{{ route('maintenance') }}" class="read-more-link">Read
+                                            <a href="{{ route('machine-vision') }}" class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@
                                         <h5 class="content-title">RELIABILITY TESTING AUTOMATION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="{{ route('factory') }}"class="read-more-link">Read
+                                            <a href="{{ route('reliability') }}"class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
@@ -213,7 +213,7 @@
                                         <h5 class="content-title mb-4">ROBOTIC AUTOMATION</h5>
                                         <p class="content-text">Products</p>
                                         <div class="read-link">
-                                            <a href="{{ route('machinery-move') }}"  class="read-more-link">Read
+                                            <a href="{{ route('roboticautomation') }}"  class="read-more-link">Read
                                                 More<i class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
