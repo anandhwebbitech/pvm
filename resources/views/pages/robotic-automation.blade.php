@@ -24,7 +24,7 @@
 
         @forelse($products as $product)
         @if(!empty($product->id))
-        <div class="col-12 col-md-6 p-3">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
             <div class="product-card"
                     style="background-image:url('{{ $product->image ? asset('public/uploads/products/' . $product->image) : asset('assets/images/new-images/product-page-img-1.webp') }}')">
                 <a href="{{ route('product-details', ['id' => $product->id]) }}" class="product-link">

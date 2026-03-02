@@ -496,7 +496,7 @@ select:-webkit-autofill:focus {
 }
 
 .main-header .main-header-top {
-    padding: 15px 0px;
+    padding: 10px 0px;
 }
 
 .main-header .main-header-top .main-header-contact .icon {
@@ -533,14 +533,14 @@ select:-webkit-autofill:focus {
 }
 
 .main-header .main-header-top .main-header-contact .contact-text {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--primary);
     font-weight: 600;
     font-family: var(--teko-family);
 }
 
 .main-header .main-header-top .main-header-contact .phone-number {
-    font-size: 15px;
+    font-size: 13px;
     color: #666;
     font-family: var(--roboto-family);
     font-weight: 400;
@@ -550,7 +550,7 @@ select:-webkit-autofill:focus {
     margin-right: 20px;
     color: var(--primary);
     text-align: center;
-    font-size: 35px;
+    font-size: 18px;
     float: left;
     position: relative;
     z-index: 1;
@@ -558,12 +558,13 @@ select:-webkit-autofill:focus {
 
 .main-header .main-header-top .main-header-contact .icon i {
     position: relative;
+    top: 10px;
 }
 
 .main-header .main-header-top .main-header-contact .icon::before {
     content: "";
     position: absolute;
-    left: -16px;
+    left: -21px;
     top: 5px;
     width: 0;
     height: 0;
@@ -571,6 +572,7 @@ select:-webkit-autofill:focus {
     border-right: 50px solid #bc090914;
     border-bottom: 25px solid transparent;
     z-index: 0;
+    transform: scale(.8);
 }
 
 .main-header .main-header-top .main-header-contact .text {
@@ -582,8 +584,8 @@ select:-webkit-autofill:focus {
 }
 
 .main-header .main-header-bottom .navbar {
-    height: 50px;
-    padding: 28px 0px 24px 0px;
+    height: 45px;
+    padding: 26px 0px 24px 0px;
     width: 100%;
     position: relative;
     z-index: 1020;
@@ -596,10 +598,10 @@ select:-webkit-autofill:focus {
 }
 
 .main-header .main-header-bottom .navbar .nav-link {
-    font-size: 14px;
+    font-size: 13px;
     color: #000;
     font-family: var(--roboto-family);
-    padding: 0px 55px 0px 0px;
+    padding: 0px 45px 0px 0px;
     font-weight: 500;
     position: relative;
     line-height: 65px;
@@ -1094,7 +1096,7 @@ select:-webkit-autofill:focus {
 
 
 .main-title {
-    font-size: 36px;
+    font-size: 28px;
     color: #000;
     margin-bottom: 15px;
     font-weight: 400;
@@ -1102,7 +1104,7 @@ select:-webkit-autofill:focus {
 }
 
 .main-title-white {
-    font-size: 36px;
+    font-size: 28px;
     color: #fff;
     margin-bottom: 15px;
     font-weight: 400;
@@ -1249,8 +1251,8 @@ h3.coun-title {
 }
 
 .about-detail .icon {
-    width: 100%;
-    height: 50px;
+    /* width: 100%; */
+    height: 40px;
     margin-bottom: 15px;
 }
 
@@ -1310,7 +1312,7 @@ h3.coun-title {
     margin-bottom: 45px;
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 50px;
 }
 
 .about-detail .mission-box .icon::after {
@@ -1478,7 +1480,7 @@ h3.coun-title {
 }
 
 .service-detail .service-box .service-img {
-    width: 100%;
+    width: 300px;
     height: 350px;
     position: relative;
 }
@@ -2407,7 +2409,7 @@ h3.coun-title {
 .page-banner .banner-content .banner-title {
     position: relative;
     margin-bottom: 0px;
-    font-size: 60px;
+    font-size: 48px;
     line-height: 100px;
     font-weight: 900;
     -webkit-animation-delay: .6s;
@@ -4357,11 +4359,11 @@ button:hover~.cursor-circle {
 
 .common2 {
     color: var(--light);
-    font-size: 36px;
+    font-size: 28px;
 }
 
 .main-title2 {
-    font-size: 28px;
+    font-size: 18px;
 }
 
 .cta-btn {
@@ -4513,7 +4515,7 @@ button:hover~.cursor-circle {
     left: 16px;
     right: 16px;
     bottom: 16px;
-    padding: 18px 22px;
+    padding: 8px 22px;
     border-radius: 14px;
 
     display: flex;
@@ -4522,7 +4524,7 @@ button:hover~.cursor-circle {
 
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 
     background: rgba(255, 255, 255, 0.15);
@@ -4766,7 +4768,7 @@ button:hover~.cursor-circle {
         height: 280px;
     }
 
-    .footer .footer-content{
+    .footer .footer-content {
         margin-bottom: 30px;
     }
 }
@@ -4830,6 +4832,11 @@ button:hover~.cursor-circle {
         border: 5px solid #ffffff;
         left: 25px;
     }
+
+    .service-detail .service-box .service-img {
+        width: 380px;
+    }
+
 }
 
 @media (max-width:375px) {
@@ -4876,6 +4883,10 @@ button:hover~.cursor-circle {
         left: -11px;
     }
 
+    .service-detail .service-box .service-img {
+        width: 340px;
+    }
+
 }
 
 @media (max-width:320px) {
@@ -4915,6 +4926,18 @@ button:hover~.cursor-circle {
         top: 78%;
         border: 5px solid #ffffff;
         left: -13px;
+    }
+
+    .service-detail .service-box .service-img {
+        width: 290px;
+    }
+
+    .product-grid {
+        padding: 0px;
+    }
+
+    .product-card {
+        width: 280px;
     }
 }
 
