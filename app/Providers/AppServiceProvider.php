@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
             View::composer('*', function ($view) {
-                $view->with('categories', Category::orderBy('id')->get());
+                $view->with('categories', Category::orderBy('id')->where('status',1)->get());
             });
     }
 }

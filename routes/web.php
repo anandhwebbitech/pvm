@@ -59,7 +59,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::post('categories/store', [CategoryController::class,'store'])->name('categorystore');
     Route::get('categories/data', [CategoryController::class,'getData'])->name('getcategorydata');
     Route::put('categories/update/{id}', [CategoryController::class,'update'])->name('categoryupdate');
-    Route::delete('/admin/category/{id}', [CategoryController::class, 'destroy'])->name('categorydelete');
+    Route::delete('category/{id}', [CategoryController::class, 'destroy'])->name('categorydelete');
     ///////////////////
     Route::get('products', [ProductController::class, 'index'])->name('products');
     Route::get('products/data', [ProductController::class, 'getData'])->name('product.data');
@@ -72,6 +72,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::post('milestone/store', [MilestonesController::class,'store'])->name('milestonestore');
     Route::get('milestone/data', [MilestonesController::class,'getData'])->name('getmilestonedata');
     Route::put('milestone/update/{id}', [MilestonesController::class,'update'])->name('milestoneupdate');
-    Route::delete('/admin/category/{id}', [MilestonesController::class, 'destroy'])->name('categorydelete');
+    Route::delete('/admin/category/{id}', [MilestonesController::class, 'destroy'])->name('milestonedelete');
 
 });

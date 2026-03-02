@@ -177,7 +177,6 @@
 
     /* EDIT */
     $(document).on('click', '.editBtn', function() {
-    alert(4);
         let id = $(this).data('id');
         $('#edit_id').val(id);
         $('#edit_year').val($(this).data('year'));
@@ -193,8 +192,7 @@
 $(document).on('click', '.deleteBtn', function () {
 
     let id = $(this).data('id');
-    let url = "{{ route('admin.categorydelete', ':id') }}".replace(':id', id);
-
+    let url = "{{ route('admin.milestonedelete', ':id') }}".replace(':id', id);
     Swal.fire({
         title: 'Are you sure?',
         text: "This Milestone will be permanently deleted!",

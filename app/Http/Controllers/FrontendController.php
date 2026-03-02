@@ -54,7 +54,7 @@ class FrontendController extends Controller
         $products = Product::orderBy("id", "desc")->where('category_id', 5)->get();
         return view("pages.gocator-3d-laser-scanner", compact('products'));
     }
-    public function showCategory($slug = null)
+    public function showCategory1($slug = null)
     {
         // Map slug to category IDs
         $category = [
@@ -86,6 +86,18 @@ class FrontendController extends Controller
         }
 
         return view($viewMap[$slug], compact('products'));
+    }
+    public function showCategory($slug)
+    {
+        $category = Category::where('slug', $slug)
+                            ->where('status', 1)
+                            ->firstOrFail();
+
+        $products = Product::where('category_id', $category->id)
+                        ->latest()
+                        ->get();
+
+        return view('pages.assembly-&-automation', compact('category', 'products'));
     }
     public function Contact()
     {

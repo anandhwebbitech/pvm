@@ -160,11 +160,11 @@
                                     @endphp
 
                                     @foreach($categories as $category)
-                                    <li>
-                                        <a href="{{ route('category.show', ['slug' => $routeMap[$category->name]]) }}" class="dropdown-item">
-                                            {{ strtoupper($category->name) }}
-                                        </a>
-                                    </li>
+                                        <li>
+                                            <a href="{{ route('category.show', $category->slug) }}" class="dropdown-item">
+                                                {{ strtoupper($category->name) }}
+                                            </a>
+                                        </li>
                                     @endforeach
                                 </ul>
                             </li>

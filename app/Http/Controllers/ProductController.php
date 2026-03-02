@@ -73,6 +73,7 @@ class ProductController extends Controller
             'category_id' => 'required',
             'price' => 'nullable|numeric',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'gallery.*'   => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'status' => 'required|boolean',
             'description' => 'nullable|string',
 
@@ -90,11 +91,24 @@ class ProductController extends Controller
             $request->image->move(public_path('uploads/products'), $imageName);
             $imagePath = $imageName;
         }
+
+        $galleryArray = [];
+        if ($request->hasFile('gallery')) {
+            foreach ($request->file('gallery') as $file) {
+                $galleryName = time().'_'.uniqid().'.'.$file->getClientOriginalExtension();
+                $file->move(public_path('uploads/products'), $galleryName);
+                $galleryArray[] = $galleryName;
+            }
+        }
         // ✅ Clean empty spec rows (IMPORTANT)
-        $specs = collect($request->specs)
-            ->filter(fn($s) => !empty($s['label']) && !empty($s['value']))
-            ->values()
-            ->toArray();
+        // $specs = collect($request->specs)
+        //     ->filter(fn($s) => !empty($s['label']) && !empty($s['value']))
+        //     ->values()
+        //     ->toArray();
+        $specs = collect($request->specs ?? [])
+                ->filter(fn($s) => !empty($s['label']) && !empty($s['value']))
+                ->values()
+                ->toArray();
         $video_url = $request->video_link;
         $video_id  = null;
 
@@ -114,16 +128,16 @@ class ProductController extends Controller
                 $video_url = null; // invalid YouTube URL
             }
         }
-
         // ✅ Create product (COLUMN BASED)
         Product::create([
             'name' => $request->name,
             'category_id' => $request->category_id,
             'price' => $request->price,
             'image' => $imagePath,
+            'gallery'        => json_encode($galleryArray),
             'status' => $request->status,
             'description' => $request->description,
-            'specifications'  => json_encode($specs),
+            'specifications'  => $specs,
             'video_url'  => $video_url,
         ]);
 
@@ -147,6 +161,7 @@ class ProductController extends Controller
             'category_id' => 'required',
             'price' => 'nullable|numeric',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'gallery.*'   => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'status' => 'required|boolean',
             'description' => 'nullable|string',
 
@@ -165,6 +180,27 @@ class ProductController extends Controller
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('uploads/products'), $imageName);
             $product->image = $imageName;
+        }
+        /* ================= GALLERY UPDATE (OPTIONAL) ================= */
+        if ($request->hasFile('gallery')) {
+
+            // delete old gallery
+            if ($product->gallery) {
+                foreach (json_decode($product->gallery) as $oldImg) {
+                    if (file_exists(public_path('uploads/products/'.$oldImg))) {
+                        unlink(public_path('uploads/products/'.$oldImg));
+                    }
+                }
+            }
+            $galleryArray = [];
+
+            foreach ($request->file('gallery') as $file) {
+                $galleryName = time().'_'.uniqid().'.'.$file->getClientOriginalExtension();
+                $file->move(public_path('uploads/products'), $galleryName);
+                $galleryArray[] = $galleryName;
+            }
+
+            $product->gallery = json_encode($galleryArray);
         }
 
         /* CLEAN SPECS */

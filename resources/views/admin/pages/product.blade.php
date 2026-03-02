@@ -86,14 +86,16 @@
                                 <input type="number" name="price" class="form-control">
                             </div>
                         </div>
-
                         <!-- IMAGE & STATUS -->
                         <div class="row g-3 mt-2">
                             <div class="col-md-4">
                                 <label>Product Image</label>
-                                <input type="file" name="image" class="form-control" required>
+                                <input type="file" name="image" class="form-control"  accept="image/*" required>
                             </div>
-
+                            <div class="col-md-4">
+                                <label>Gallery  Image</label>
+                                <input type="file" name="gallery[]" class="form-control" accept="image/*" multiple accept="image/*">
+                            </div>
                             <div class="col-md-4">
                                 <label>Status</label>
                                 <select name="status" class="form-control">
@@ -195,11 +197,21 @@
                                         style="max-height: 150px; display: none;">
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <!-- OLD IMAGE PREVIEW -->
                                 <label>Product Image</label>
                                 <input type="file" name="image" class="form-control">
                                 <small class="text-muted">Leave empty to keep existing image</small>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <label>Gallery Images</label>
+                                <!-- Old Gallery Preview -->
+                                <div id="edit_gallery_preview" class="d-flex flex-wrap gap-2 mb-3"></div>
+
+                                <!-- Upload New Gallery -->
+                                <hr>
+                                <input type="file" name="gallery[]" class="form-control" multiple>
+                                <small class="text-muted">Leave empty to keep existing gallery</small>
                             </div>
                             <div class="col-md-4">
                                 <label>Status</label>
@@ -359,6 +371,36 @@
                 } else {
                     $('#edit_image_preview').hide();
                 }
+                /* ===== GALLERY PREVIEW ===== */
+                const galleryWrapper = $('#edit_gallery_preview');
+                galleryWrapper.empty();
+
+                if (data.gallery) {
+
+                    let gallery = [];
+
+                    try {
+                        gallery = Array.isArray(data.gallery)
+                            ? data.gallery
+                            : JSON.parse(data.gallery);
+                    } catch (e) {
+                        gallery = [];
+                    }
+
+                    if (gallery.length > 0) {
+                        gallery.forEach(function(img) {
+
+                            galleryWrapper.append(`
+                                <div style="position:relative">
+                                    <img src="{{ asset('public/uploads/products') }}/${img}"
+                                        class="img-gallery"
+                                        style="height:110px;">
+                                </div>
+                            `);
+
+                        });
+                    }
+                }
 
                 /* ===== RESET SPECS COMPLETELY ===== */
                 const $wrapper = $('#editSpecsWrapper');
@@ -470,7 +512,7 @@
             <input type="text" name="specs[${index}][label]" class="form-control" placeholder="Specification" required>
         </div>
         <div class="col-md-4">
-            <input type="text" name="specs[${index}][value]" class="form-control" placeholder="Value" required>
+            <input type="text" name="specs[${index}][value]" class="form-control" placeholder="Value" >
         </div>
         <div class="col-md-3">
             <input type="text" name="specs[${index}][unit]" class="form-control" placeholder="Unit">

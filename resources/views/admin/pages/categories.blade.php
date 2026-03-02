@@ -103,6 +103,8 @@
                     <label>Category Name</label>
                     <input type="text" name="name" class="form-control mb-3" required>
 
+                    <label>Category Image</label>
+                    <input type="file" name="image" class="form-control mb-3" accept="image/*">
                    
                 </div>
 
@@ -137,6 +139,11 @@
                         <option value="0">Inactive</option>
                     </select>
 
+                    <label>Current Image</label><br>
+                    <img id="edit_image_preview" src="" width="80" class="mb-2" style="border-radius:6px;"><br>
+
+                    <label>Change Image</label>
+                    <input type="file" name="image" class="form-control mb-3">
                    
                 </div>
 
@@ -153,6 +160,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Image</th>
                     <th>Name</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -197,7 +205,7 @@ $(function () {
                 render: (data, type, row, meta) =>
                     meta.row + meta.settings._iDisplayStart + 1
             },
-           
+            { data: 'image', orderable: false, searchable: false },
             { data: 'name' },
             {
                 data: 'status',
@@ -216,10 +224,15 @@ $(function () {
 $(document).on('click', '.editBtn', function () {
 
     let id = $(this).data('id');
-
+    let image = $(this).data('image');
     $('#edit_name').val($(this).data('name'));
     $('#edit_status').val($(this).data('status'));
    
+    if (image) {
+        $('#edit_image_preview').attr('src', "{{ asset('public/uploads/categories') }}/" + image);    
+    } else {
+        $('#edit_image_preview').attr('src', '');
+    }
 
     let route = "{{ route('admin.categoryupdate', ':id') }}";
     $('#editCategoryForm').attr('action', route.replace(':id', id));
@@ -227,7 +240,7 @@ $(document).on('click', '.editBtn', function () {
     $('#editCategoryModal').modal('show');
 });
 /* DELETE CATEGORY – SweetAlert */
-$(document).on('click', '.deleteBtn', function () {
+$(document).on('click', '.cat_deleteBtn', function () {
 
     let id = $(this).data('id');
     let url = "{{ route('admin.categorydelete', ':id') }}".replace(':id', id);

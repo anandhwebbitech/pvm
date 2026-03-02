@@ -153,7 +153,7 @@
             </div>
             <div class="mt-5">
                 <div class="owl-carousel service-slider">
-                    <div class="item">
+                    {{-- <div class="item">
                         <div class="service-box">
                             <div class="service-img">
                                 <img src="./assets/images/new-images/home-products-1.webp" alt="">
@@ -220,7 +220,26 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
+                    @foreach ($categories as $category)
+                        <div class="item">
+                            <div class="service-box">
+                                <div class="service-img">
+                                    <img src="{{ asset('public/uploads/categories/'.$category->image) }}" alt="{{ $category->name }}">
+                                    <div class="content-wrapper">
+                                        <div class="content-detail">
+                                            <h5 class="content-title mb-4">{{ $category->name }}</h5>
+                                            <p class="content-text">Products</p>
+                                            <div class="read-link">
+                                                <a href="{{ route('category.show', $category->slug) }}" class="read-more-link">Read
+                                                    More<i class="bi bi-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    @endforeach
                 </div>
             </div>
             <div class="dotted-line">

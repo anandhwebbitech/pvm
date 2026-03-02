@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -27,25 +28,33 @@ class CategoryController extends Controller
             $categories = Category::latest()->get();
 
             return DataTables::of($categories)
-      
+
+                ->addColumn('image', function ($row) {
+                    if ($row->image) {
+                        return '<img src="' . asset('public/uploads/categories/' . $row->image) . '" width="60" height="60" style="object-fit:cover;">';
+                    } else {
+                        return 'No Image';
+                    }
+                })
                 ->addColumn('action', function ($row) {
                     return '
                         <button 
                             class="btn btn-sm btn-primary editBtn"
-                            data-id="'.$row->id.'"
-                            data-name="'.$row->name.'"
-                            data-status="'.$row->status.'">
+                            data-id="' . $row->id . '"
+                            data-name="' . $row->name . '"
+                            data-status="' . $row->status . '"
+                            data-image="' . $row->image . '">
                             Edit
                         </button>
                         <button 
-                            class="btn btn-sm btn-danger deleteBtn"
-                            data-id="'.$row->id.'">
+                            class="btn btn-sm btn-danger cat_deleteBtn"
+                            data-id="' . $row->id . '">
                             Delete
                         </button>
                     ';
                 })
 
-                ->rawColumns(['action'])
+                ->rawColumns(['image', 'action'])
                 ->make(true);
         }
     }
@@ -53,7 +62,7 @@ class CategoryController extends Controller
     /* ===============================
         STORE CATEGORY
     ================================*/
-    public function store(Request $request)
+    public function store1(Request $request)
     {
         $request->validate([
             'name'  => 'required|string|max:255',
@@ -61,6 +70,30 @@ class CategoryController extends Controller
 
         Category::create([
             'name'   => $request->name,
+            'status' => 1
+        ]);
+
+        return redirect()->back()->with('success', 'Category added successfully');
+    }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name'  => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        ]);
+
+        $imageName = null;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/categories'), $imageName);
+        }
+
+        Category::create([
+            'name'   => $request->name,
+            'slug'   => Str::slug($request->name),
+            'image'  => $imageName,
             'status' => 1
         ]);
 
@@ -76,11 +109,29 @@ class CategoryController extends Controller
 
         $request->validate([
             'name'   => 'required|string|max:255',
-            'status' => 'required'
+            'status' => 'required|in:0,1',
+            'image'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
+
+        $imageName = $category->image;
+
+        // If new image uploaded
+        if ($request->hasFile('image')) {
+
+            // Delete old image
+            if ($category->image && file_exists(public_path('uploads/categories/' . $category->image))) {
+                unlink(public_path('uploads/categories/' . $category->image));
+            }
+
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('uploads/categories'), $imageName);
+        }
 
         $category->update([
             'name'   => $request->name,
+            'slug'   => Str::slug($request->name),
+            'image'  => $imageName,
             'status' => $request->status
         ]);
 
