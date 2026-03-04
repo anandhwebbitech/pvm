@@ -397,7 +397,7 @@ select:-webkit-autofill:focus {
     padding: 0px;
     background: #fff !important;
     animation: swip_down 0.5s linear 1;
-    height: 153px;
+    height: 142px;
 }
 
 .fixed .navbar-brand img {
@@ -4612,16 +4612,20 @@ button:hover~.cursor-circle {
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
     position: relative;
     overflow: hidden;
+    width: 85%;
+    margin: auto;
 }
 
 /* Carousel wrapper */
 .featured-carousel {
     border-radius: 14px;
     overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
 .featured-carousel img {
-    height: 380px;
+    height: 100%;
     object-fit: cover;
     border-radius: 14px;
     transition: transform 0.6s ease;
@@ -4764,13 +4768,23 @@ button:hover~.cursor-circle {
         grid-template-columns: 1fr;
     }
 
+    /* .container-custom {
+        width: 338px;
+    }
+
+    .featured-carousel {
+        width: 300px;
+        height: 300px;
+    }
+
     .featured-carousel img {
-        height: 280px;
+        height: 300px;
+        width: 300px !important;
     }
 
     .footer .footer-content {
         margin-bottom: 30px;
-    }
+    } */
 }
 
 @media (min-width:576px) and (max-width:767px) {
@@ -4837,6 +4851,22 @@ button:hover~.cursor-circle {
         width: 380px;
     }
 
+    .container-custom {
+        width: 100%;
+       
+    }
+
+    /* 
+    .featured-carousel {
+        width: 350px;
+        height: 350px;
+    }
+
+    .featured-carousel img {
+        width: 350px !important;
+        height: 350px !important;
+    } */
+
 }
 
 @media (max-width:375px) {
@@ -4887,9 +4917,27 @@ button:hover~.cursor-circle {
         width: 340px;
     }
 
+    /* .container-custom {
+        width: 340px;
+        height: 340px;
+    }
+
+    .featured-carousel {
+        width: 305px;
+        height: 305px;
+    }
+
+    .featured-carousel img {
+        width: 305px !important;
+        height: 305px !important;
+    } */
 }
 
 @media (max-width:320px) {
+    .container {
+        max-width: 100%;
+    }
+
     .about-detail {
         padding: 45px 0px 0px;
     }
@@ -4939,6 +4987,25 @@ button:hover~.cursor-circle {
     .product-card {
         width: 280px;
     }
+
+
+    /* 
+    .featured-carousel {
+        width: 260px;
+        height: 260px;
+    }
+
+    .featured-carousel img {
+        height: 260px !important;
+        width: 260px !important;
+    }
+
+    .container-custom {
+        width: 305px;
+        height: 300px;
+    } */
+
+
 }
 
 .product-select {

@@ -18,7 +18,7 @@
     </div>
 </section>
 
-<section class="product-section mt-0 mt-md-5">
+<section class="product-section ">
     <div class="container">
         <div class="row">
 
